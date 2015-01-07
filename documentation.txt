@@ -1,367 +1,113 @@
 ﻿dYSToPiA
-
-
+--------------------------------------------------------------------------------
 the official minetest subgame
 documentation
-
-
-by: Merlin
+--------------------------------------------------------------------------------
+by Merlin
 github: sct-0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+
+________________________________________________________________________________
+
+0.0
+ Abbreviations
+
+
+placments
+
+d/ro/st - attached to dirt/rock/stone block
+
+te - from temperated biomes
+
+tr - from tropical biomes
+
+consistency
+
+f – fine
+
+r – rough
+
+colours
+
+y – yellow
+
+re – red
+
+w – white
+
+looks
+
+we - wet
+
+________________________________________________________________________________
+
 1.0
- Setting
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ setting
 
 1.1
- Story
+ story
 
 ?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 1.2
- Landscape
+ landscape
 
 dry, almost no drinkable water, toxic fluids
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+________________________________________________________________________________
 
 2.0
- Objects
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ objects
 
 
 2.1
- Blocks
+ blocks
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+bog
+dirt 
+dirt(we) -
+grass(d, dr) 
+grass(d, te) 
+grass(d, tr) 
+gravel 
+hard salt 
+moss(d) 
+moss(st) 
+mud 
+rock 
+sand(f, re)
+sand(f, y)
+sand(f, y, we)
+sand(f, w)
+sand(f, w, we)
+sand(r, y)
+sand(r, re)
+sandstone(y) 
+sandstone(r) 
+sandrock(y)
+sandrock(r)
+stone 
 
 2.2
- Items
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ items
 
 2.3
- Crafting & Smelting
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ crafting & smelting
 
 2.3.1
- Crafting
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ crafting
 
 2.3.2
- Smelting
+ smelting
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+________________________________________________________________________________
 
 3.0
- The Landscape
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ the landscape
 
 3.1
- Biomes
+ biomes
 
 Biomes are parts of the landscape which have a lot of factors in common, such as the blocks they are made of, temperature, humidity,
 ionizing radiation etc.
@@ -377,6 +123,7 @@ natural biomes
 - rivers
 - lakes
 - oceans
+- beaches
 - ...
 
 manmade biomes
@@ -387,16 +134,68 @@ manmade biomes
 	- toxic areas
 	- ...
 
+3.1.1
+ deserts
 
 
+ground stuff:
+
+sand desert: sand(f, r, y, r), sandstone(y, r), sandrock(y, r)
+
+stone desert: rock, stone, gravel
 
 
+gravel desert: stone, gravel
 
 
+salt desert: hard salt
+
+3.2
+ steppes
 
 
+ground stuff:
+
+sand steppes: sand(r, y,),
+sandstone(y, r), sandrock(y, r)
+
+stone steppes: rocks, stone, gravel
 
 
+gravel steppes: stone, gravel
 
 
+salt steppes: hard salt
 
+3.3
+ meadows, forests, jungles, wetlands
+
+ground stuff:
+
+meadows: dirt, grass(d, te), stone, gravel, moss(g, ro)
+
+
+forest: dirt, grass(d, te), stone, gravel, moss(g, ro), rocks
+
+
+jungles: dirt, dirt(we), junglegrass(d, tr) 				stone, gravel, moss(g, ro), rocks
+
+
+wetlands: dirt, wet dirt, grass(d), stone, 				gravel, moss(g, ro), bog
+
+3.4
+rivers, lakes, oceans, beaches
+
+
+ground stuff:
+
+rivers: sand(f, we, w, y), dirt(we), gravel, stone, 		rock
+
+
+lakes: sand(f, r, we, w, y), dirt(we), gravel, stone, rock, mud
+
+
+oceans: sand(f, r, we, w, y), dirt(we), gravel, stone, rock, mud
+
+
+beaches: sand(f, r, w, y), gravel, stone
